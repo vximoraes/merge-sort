@@ -56,7 +56,13 @@ $PIP_CMD install --upgrade jupyter notebook jupyterlab
 # Instalar kernel TypeScript
 echo ""
 echo "🔧 Instalando kernel TypeScript para Jupyter..."
-npx tslab install --version
+npx tslab install || {
+    echo "⚠️ Falha ao instalar tslab via npx. Tente executar 'npx tslab install' manualmente."
+}
+
+# Verificar se o kernel tslab foi registrado
+echo "\n🔍 Verificando se o kernel 'tslab' foi registrado..."
+python3 -m jupyter kernelspec list | grep tslab || echo "⚠️ Kernel 'tslab' não encontrado. Execute 'npx tslab install' no ambiente alvo."
 
 # Verificar instalação
 echo ""

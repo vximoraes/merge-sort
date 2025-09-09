@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm run install-kernel",
-    "install-kernel": "npx tslab install --version",
+  "install-kernel": "bash ./scripts/install_tslab.sh",
   "start": "bash ./scripts/start_jupyter.sh --no-browser --port=8888",
   "start-browser": "bash ./scripts/start_jupyter.sh",
   "lab": "bash ./scripts/start_jupyter.sh",
