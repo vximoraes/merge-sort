@@ -6,12 +6,12 @@
   "scripts": {
     "setup": "npm install && npm run install-kernel",
     "install-kernel": "npx tslab install --version",
-    "start": "jupyter notebook --no-browser --port=8888",
-    "start-browser": "jupyter notebook",
-    "lab": "jupyter lab",
-    "kernel-list": "jupyter kernelspec list",
-    "kernel-remove": "jupyter kernelspec remove tslab",
-    "check": "node --version && jupyter --version && jupyter kernelspec list | grep tslab",
+    "start": "python3 -m notebook --no-browser --port=8888",
+    "start-browser": "python3 -m notebook",
+    "lab": "python3 -m jupyterlab",
+    "kernel-list": "python3 -m jupyter kernelspec list",
+    "kernel-remove": "python3 -m jupyter kernelspec remove tslab",
+    "check": "node --version && python3 -m jupyter --version && python3 -m jupyter kernelspec list | grep tslab",
     "clean": "npm run kernel-remove && npm install && npm run install-kernel",
     "test": "echo \"✅ Para testar, execute 'npm start' e abra src/teste.ipynb\""
   },

@@ -50,10 +50,8 @@ if ! command -v $PIP_CMD &> /dev/null; then
 fi
 
 # Instalar Jupyter se não estiver instalado
-if ! command -v jupyter &> /dev/null; then
-    echo "📓 Instalando Jupyter..."
-    $PIP_CMD install jupyter
-fi
+echo "📓 Instalando/Atualizando Jupyter..."
+$PIP_CMD install --upgrade jupyter notebook jupyterlab
 
 # Instalar kernel TypeScript
 echo ""
