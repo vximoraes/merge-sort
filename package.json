@@ -6,9 +6,9 @@
   "scripts": {
     "setup": "npm install && npm run install-kernel",
     "install-kernel": "npx tslab install --version",
-    "start": "python3 -m notebook --no-browser --port=8888",
-    "start-browser": "python3 -m notebook",
-    "lab": "python3 -m jupyterlab",
+  "start": "bash ./scripts/start_jupyter.sh --no-browser --port=8888",
+  "start-browser": "bash ./scripts/start_jupyter.sh",
+  "lab": "bash ./scripts/start_jupyter.sh -m jupyterlab",
     "kernel-list": "python3 -m jupyter kernelspec list",
     "kernel-remove": "python3 -m jupyter kernelspec remove tslab",
     "check": "node --version && python3 -m jupyter --version && python3 -m jupyter kernelspec list | grep tslab",

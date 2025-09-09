@@ -64,6 +64,11 @@ echo "🔍 Verificando instalação..."
 echo "Kernels disponíveis:"
 jupyter kernelspec list
 
+# Tornar o wrapper executável (se existir)
+if [ -f "./scripts/start_jupyter.sh" ]; then
+    chmod +x ./scripts/start_jupyter.sh || true
+fi
+
 echo ""
 echo "🎉 Setup concluído com sucesso!"
 echo ""
