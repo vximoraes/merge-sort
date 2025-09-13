@@ -1,5 +1,3 @@
-
-
 // Função principal do Merge Sort
 // Etapa 1: Função recursiva que divide o array
 export function mergeSort(arr: number[]): number[] {
